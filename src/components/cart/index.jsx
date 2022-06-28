@@ -1,7 +1,8 @@
 import { useSelector } from "react-redux";
 import CardCart from "./cardCart";
+import './style.css'
 
-function Cart () {
+function Cart ({setShowCart}) {
 
     const products = useSelector((state) => state.cart)
 
@@ -9,7 +10,13 @@ function Cart () {
 
     return (
         <div className="cartContainer">
-            {products.map((elem, index) => <CardCart key={index} product={elem}/>)}
+            <div className="cartHeader">
+                <h3 className="cartTitle">Carrinho</h3>
+                <p className="cartClose" onClick={() => setShowCart(false)}>X</p>
+            </div>
+            <div className="cartContent">
+                {products.map((elem, index) => <CardCart key={index} product={elem}/>)}
+            </div>
         </div>
     )
 }

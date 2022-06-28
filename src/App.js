@@ -1,14 +1,18 @@
+import { useState } from 'react';
 import './App.css';
 import BodyContainer from './components/body';
 import Cart from './components/cart';
 import Header from './components/header';
 
 function App() {
+
+  const [showCart, setShowCart] = useState(false)
+
   return (
     <div>
-      <Header/>
+      <Header setShowCart={setShowCart}/>
       <BodyContainer />
-      <Cart />
+      {showCart && <Cart setShowCart={setShowCart}/>}
     </div>
   );
 }
