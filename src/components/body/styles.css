@@ -1,0 +1,6 @@
+.body-container{
+    display: flex;
+    gap: 15px;
+    padding: 30px 115px;
+    flex-wrap: wrap;
+}
