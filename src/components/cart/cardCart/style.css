@@ -18,6 +18,7 @@
 
 .cardContent h2{
     font-size: 18px;
+    color: #024F28;
 }
 
 .cardContent p{
@@ -32,4 +33,8 @@
     color: red;
     cursor: pointer;
     font-size: 12px;
+}
+
+.cardContent button:hover {
+    text-decoration: underline;
 }
